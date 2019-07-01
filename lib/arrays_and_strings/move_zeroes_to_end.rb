@@ -7,17 +7,5 @@
 
 class MoveZeroesToEnd
   def self.run(arr)
-    pointer = 0
-
-    arr.each do |item|
-      unless item.zero?
-        arr[pointer] = item
-        pointer += 1
-      end
-    end
-
-    pointer.upto(arr.length - 1) { |i| arr[i] = 0 }
-
-    arr
   end
 end

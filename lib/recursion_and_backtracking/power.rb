@@ -7,10 +7,5 @@
 
 class Power
   def self.run(x, n)
-    return 1 if n.zero?
-    return x if x == 1
-
-    m = run(x, n / 2)
-    n.even? ? m * m : m * m * x
   end
 end

@@ -11,20 +11,5 @@ class CloneEvenNumbers
   end
 
   def self.run(arr)
-    i = find_last_positive_number(arr)
-    j = arr.length
-
-    while i >= 0
-      if arr[i].even?
-        j -= 1
-        arr[j] = arr[i]
-      end
-
-      j -= 1
-      arr[j] = arr[i]
-      i -= 1
-    end
-
-    arr
   end
 end

@@ -11,25 +11,5 @@
 
 class DutchNationalFlag
   def self.run(arr, index)
-    lo = -1
-    mid = -1
-    hi = arr.length
-
-    target = arr[index]
-
-    while (mid + 1 < hi)
-      if arr[mid + 1] < target
-        arr[mid + 1], arr[lo + 1] = arr[lo + 1], arr[mid + 1]
-        lo += 1
-        mid += 1
-      elsif arr[mid + 1] > target
-        arr[hi - 1], arr[mid + 1] = arr[mid + 1], arr[hi - 1]
-        hi -= 1
-      elsif arr[mid + 1] == target
-        mid += 1
-      end
-    end
-
-    arr
   end
 end

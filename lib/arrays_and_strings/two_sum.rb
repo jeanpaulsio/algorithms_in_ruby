@@ -6,16 +6,5 @@
 
 class TwoSum
   def self.run(arr, target)
-    i = 0
-    j = arr.length - 1
-
-    while (i < j)
-      sum = arr[i] + arr[j]
-      i += 1 if sum < target
-      j -= 1 if sum > target
-      return [i, j] if sum == target
-    end
-
-    return nil
   end
 end

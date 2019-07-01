@@ -7,20 +7,6 @@
 
 class ZeroSumSubarray
   def self.run(arr)
-    return nil if arr.nil? || arr.empty?
-
-    hsh = {}
-    sum = 0
-
-    arr.each_with_index do |item, index|
-      sum += item
-
-      return [0, index] if sum.zero?
-      return [hsh[sum] + 1, index] if hsh[sum]
-
-      hsh[sum] = index
-    end
-
-    return nil
   end
 end
+

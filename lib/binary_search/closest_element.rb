@@ -16,25 +16,5 @@ class ClosestElement
   end
 
   def self.run(arr, target:)
-    return -1 if arr.empty? || arr.nil?
-
-    low = 0
-    high = arr.length - 1
-    result = -1
-
-    while low <= high
-      mid = low + (high - low) / 2
-      result = record(arr, mid, target, result)
-
-      if arr[mid] > target
-        high = mid - 1
-      elsif arr[mid] < target
-        low = mid + 1
-      else
-        return mid
-      end
-    end
-
-    return result
   end
 end
