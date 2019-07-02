@@ -5,6 +5,7 @@ A collection of classic computer science algorithms written in Ruby
 ```bash
 $ git clone https://github.com/jeanpaulsio/algorithms_in_ruby.git
 $ bundle install
+$ asdf install
 ```
 
 ## Running Tests
@@ -12,6 +13,15 @@ $ bundle install
 ```bash
 $ ruby lib/arrays_and_strings/reverse_string_test.rb
 ```
+
+## Watching Tests
+
+If you prefer not to run tests manually, you can run:
+
+```
+$ bundle exec guard
+```
+
 
 ## Prettier-ing files
 
@@ -49,3 +59,4 @@ bundle exec rbprettier --write '**/*.rb'
 
 1. [Fibonacci](./lib/recursion_and_backtracking/fibonacci.rb)
 2. [Power](./lib/recursion_and_backtracking/power.rb)
+3. [Print Combos](./lib/recursion_and_backtracking/print_combos.rb)
