@@ -8,28 +8,6 @@
 
 class PhoneNumberMnemonics
   def self.run(arr, buffer, next_index, buffer_index)
-    return "" if arr.empty?
-
-    if buffer.length == buffer_index || arr.length == next_index
-      if buffer.all? nil
-        return ""
-      else
-        p buffer
-      end
-      
-      return
-    end
-
-    letters = letters_map[arr[next_index]]
-
-    if letters.empty?
-      run(arr, buffer, next_index + 1, buffer_index)
-    end
-
-    letters.each do |letter|
-      buffer[buffer_index] = letter
-      run(arr, buffer, next_index + 1, buffer_index + 1)
-    end
   end
 
   private
