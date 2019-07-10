@@ -8,18 +8,5 @@
 
 class CoinChange
   def self.run(coins, target, buffer, next_index, sum)
-    return if target <= 0
-    return if sum > target
-
-    if sum == target
-      p buffer
-      return
-    end
-
-    next_index.upto(coins.length - 1) do |i|
-      buffer.push coins[i]
-      run(coins, target, buffer, i, sum + coins[i])
-      buffer.pop
-    end
   end
 end
