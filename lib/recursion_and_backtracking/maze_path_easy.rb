@@ -15,18 +15,6 @@
 class MazePathEasy
   def self.run(arr, i, j)
     return false if arr.nil?
-    return false if oob?(arr, i, j) || arr[i][j] == 1
-    return true if i == arr.length - 1 && j == arr.length - 1
-
-    if run(arr, i + 1, j)
-      return true
-    end
-
-    if run(arr, i, j + 1)
-      return true
-    end
-
-    false
   end
 
   private
